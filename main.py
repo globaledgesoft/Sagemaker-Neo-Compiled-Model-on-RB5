@@ -11,7 +11,7 @@ f = open("coco.names", 'r')
 coco = f.readlines()
 print(coco)
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("qtiqmmfsrc name=qmmf ! video/x-raw, format=NV12, width=640, height=480, framerate=30/1 ! videoconvert ! video/x-raw,format=BGR ! appsink drop=1", cv2.CAP_GSTREAMER)
 
 while(cap.isOpened()):
     ret, img = cap.read()
